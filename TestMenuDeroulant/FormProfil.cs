@@ -16,5 +16,10 @@ namespace TestMenuDeroulant
         {
             InitializeComponent();
         }
+
+        private void FormProfil_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,21 +37,22 @@
             label1.Location = new Point(100, 63);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(196, 31);
+            label1.Size = new Size(163, 25);
             label1.TabIndex = 0;
             label1.Text = "Gestion du Profil";
             // 
             // FormProfil
             // 
-            AutoScaleDimensions = new SizeF(14F, 31F);
+            AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1400, 698);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "FormProfil";
             Text = "FormProfil";
+            Load += FormProfil_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -89,7 +89,7 @@ namespace TestMenuDeroulant
             // Quand expanded = false, n'affiche que l'emoji.
             if (expanded)
             {
-                btnItem1.Text = "🏠  Accueil";
+                btnItem1.Text = "🚲  Vélo";
                 btnItem2.Text = "👤  Profil";
                 btnItem3.Text = "⚙️  Paramètres";
                 btnItem4.Text = "🔒  Déconnexion";
@@ -106,7 +106,7 @@ namespace TestMenuDeroulant
             }
             else
             {
-                btnItem1.Text = "🏠";
+                btnItem1.Text = "🚲";
                 btnItem2.Text = "👤";
                 btnItem3.Text = "⚙️";
                 btnItem4.Text = "🔒";
@@ -158,6 +158,11 @@ namespace TestMenuDeroulant
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
 
         }
