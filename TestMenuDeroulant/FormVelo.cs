@@ -28,6 +28,7 @@ namespace TestMenuDeroulant
             Modele.Velo listeVelo = new Modele.Velo();
             DataView dv = new DataView(listeVelo.ListeVelos());
             dgvVelo.DataSource = dv;
+
         }
 
     }
