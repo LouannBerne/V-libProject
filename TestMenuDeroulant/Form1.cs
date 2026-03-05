@@ -125,7 +125,7 @@ namespace TestMenuDeroulant
         // Exemples d'actions pour les items
         private void btnItem1_Click(object sender, EventArgs e)
         {
-            ShowContent("Accueil");
+            openChildForm(new FormVelo()); // Ouvre un formulaire enfant pour les vélos
         }
 
         private void btnItem2_Click(object sender, EventArgs e)
@@ -141,6 +141,7 @@ namespace TestMenuDeroulant
         private void btnItem4_Click(object sender, EventArgs e)
         {
             ShowContent("Déconnexion");
+            Controleur.MaConnexion.sedeconnecter();
             Application.Exit(); // Ferme l'application
         }
 
@@ -159,10 +160,26 @@ namespace TestMenuDeroulant
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Controleur.init();
+            Controleur.MaConnexion.seconnecter();
+            if (Controleur.MaConnexion.Connopen)
+            {
+                MessageBox.Show("Connexion réussie à la base de données !", "Succès",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Erreur à la connexion de la base de données !", "ERREUR",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelContent_Paint(object sender, PaintEventArgs e)
         {
 
         }

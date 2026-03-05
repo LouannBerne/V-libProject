@@ -150,6 +150,7 @@ namespace TestMenuDeroulant
             panelContent.Name = "panelContent";
             panelContent.Size = new Size(800, 650);
             panelContent.TabIndex = 0;
+            panelContent.Paint += panelContent_Paint;
             // 
             // timerMenu
             // 
