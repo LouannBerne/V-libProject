@@ -90,7 +90,7 @@ namespace TestMenuDeroulant
             if (expanded)
             {
                 btnItem1.Text = "🚲  Vélo";
-                btnItem2.Text = "👤  Profil";
+                btnItem2.Text = "👤  Adhérant";
                 btnItem3.Text = "⚙️  Paramètres";
                 btnItem4.Text = "🔒  Déconnexion";
 
@@ -130,7 +130,7 @@ namespace TestMenuDeroulant
 
         private void btnItem2_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormProfil()); // Ouvre un formulaire enfant pour le profil
+            openChildForm(new FormAdherents()); // Ouvre un formulaire enfant pour le profil
         }
 
         private void btnItem3_Click(object sender, EventArgs e)
@@ -164,8 +164,8 @@ namespace TestMenuDeroulant
             Controleur.MaConnexion.seconnecter();
             if (Controleur.MaConnexion.Connopen)
             {
-                MessageBox.Show("Connexion réussie à la base de données !", "Succès",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Connexion réussie à la base de données !", "Succès",
+                //MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
