@@ -2,8 +2,15 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace TestMenuDeroulant
-            {
+namespace TestMenuDeroulant {
+
+    public enum EtatGestion
+    {
+        Create,
+        Update,
+        Delete
+    }
+
     public partial class Form1 : Form
     {
         private bool _menuExpanded = true;

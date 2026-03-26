@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
             btFermer = new Button();
             dgvAdherant = new DataGridView();
+            cmsEdition = new ContextMenuStrip(components);
+            ajouterToolStripMenuItem = new ToolStripMenuItem();
+            modifierToolStripMenuItem = new ToolStripMenuItem();
+            suprimerToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dgvAdherant).BeginInit();
+            cmsEdition.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -67,6 +73,7 @@
             dgvAdherant.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAdherant.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvAdherant.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAdherant.ContextMenuStrip = cmsEdition;
             dgvAdherant.Location = new Point(12, 124);
             dgvAdherant.Margin = new Padding(2);
             dgvAdherant.MultiSelect = false;
@@ -75,6 +82,33 @@
             dgvAdherant.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAdherant.Size = new Size(776, 450);
             dgvAdherant.TabIndex = 3;
+            // 
+            // cmsEdition
+            // 
+            cmsEdition.Items.AddRange(new ToolStripItem[] { ajouterToolStripMenuItem, modifierToolStripMenuItem, suprimerToolStripMenuItem });
+            cmsEdition.Name = "cmsEdition";
+            cmsEdition.Size = new Size(181, 92);
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            ajouterToolStripMenuItem.Size = new Size(180, 22);
+            ajouterToolStripMenuItem.Text = "Ajouter";
+            ajouterToolStripMenuItem.Click += ajouterToolStripMenuItem_Click;
+            // 
+            // modifierToolStripMenuItem
+            // 
+            modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            modifierToolStripMenuItem.Size = new Size(180, 22);
+            modifierToolStripMenuItem.Text = "Modifier";
+            modifierToolStripMenuItem.Click += modifierToolStripMenuItem_Click;
+            // 
+            // suprimerToolStripMenuItem
+            // 
+            suprimerToolStripMenuItem.Name = "suprimerToolStripMenuItem";
+            suprimerToolStripMenuItem.Size = new Size(180, 22);
+            suprimerToolStripMenuItem.Text = "Suprimer";
+            suprimerToolStripMenuItem.Click += suprimerToolStripMenuItem_Click;
             // 
             // FormAdherents
             // 
@@ -91,6 +125,7 @@
             Text = "FormProfil";
             Load += FormProfil_Load;
             ((System.ComponentModel.ISupportInitialize)dgvAdherant).EndInit();
+            cmsEdition.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -100,5 +135,9 @@
         private Label label1;
         private Button btFermer;
         private DataGridView dgvAdherant;
+        private ContextMenuStrip cmsEdition;
+        private ToolStripMenuItem ajouterToolStripMenuItem;
+        private ToolStripMenuItem modifierToolStripMenuItem;
+        private ToolStripMenuItem suprimerToolStripMenuItem;
     }
 }

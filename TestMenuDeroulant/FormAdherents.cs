@@ -34,5 +34,20 @@ namespace TestMenuDeroulant
         {
             this.Close();
         }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void suprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -64,5 +64,26 @@ namespace TestMenuDeroulant
         {
             FormVelo_Load(sender, e);
         }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (System.Windows.Forms.Application.OpenForms["Form1"] as Form1).openChildForm(new FormGestionVelo(EtatGestion.Create, 0));
+        }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvVelo.SelectedRows.Count == 1)
+                (System.Windows.Forms.Application.OpenForms["Form1"] as Form1).openChildForm(new FormGestionVelo(EtatGestion.Update, Convert.ToInt32(dgvVelo.SelectedRows[0].Cells[0].Value)));
+            else
+                MessageBox.Show("Veuillez sélectionner une ligne à modifier.");
+        }
+
+        private void suprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvVelo.SelectedRows.Count == 1)
+                (System.Windows.Forms.Application.OpenForms["Form1"] as Form1).openChildForm(new FormGestionVelo(EtatGestion.Delete, Convert.ToInt32(dgvVelo.SelectedRows[0].Cells[0].Value)));
+            else
+                MessageBox.Show("Veuillez sélectionner une ligne à modifier.");
+        }
     }
 }

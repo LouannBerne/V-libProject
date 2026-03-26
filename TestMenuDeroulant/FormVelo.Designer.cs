@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
             dgvVelo = new DataGridView();
             btFermer = new Button();
             cbBorne = new ComboBox();
             btReset = new Button();
+            cmsEdition = new ContextMenuStrip(components);
+            ajouterToolStripMenuItem = new ToolStripMenuItem();
+            modifierToolStripMenuItem = new ToolStripMenuItem();
+            suprimerToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dgvVelo).BeginInit();
+            cmsEdition.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -51,11 +57,12 @@
             // 
             dgvVelo.AllowUserToAddRows = false;
             dgvVelo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = Color.DarkGray;
-            dgvVelo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = Color.DarkGray;
+            dgvVelo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvVelo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvVelo.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvVelo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvVelo.ContextMenuStrip = cmsEdition;
             dgvVelo.Location = new Point(12, 124);
             dgvVelo.MultiSelect = false;
             dgvVelo.Name = "dgvVelo";
@@ -95,6 +102,33 @@
             btReset.UseVisualStyleBackColor = true;
             btReset.Click += btReset_Click;
             // 
+            // cmsEdition
+            // 
+            cmsEdition.Items.AddRange(new ToolStripItem[] { ajouterToolStripMenuItem, modifierToolStripMenuItem, suprimerToolStripMenuItem });
+            cmsEdition.Name = "cmsEdition";
+            cmsEdition.Size = new Size(181, 92);
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            ajouterToolStripMenuItem.Size = new Size(180, 22);
+            ajouterToolStripMenuItem.Text = "Ajouter";
+            ajouterToolStripMenuItem.Click += ajouterToolStripMenuItem_Click;
+            // 
+            // modifierToolStripMenuItem
+            // 
+            modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            modifierToolStripMenuItem.Size = new Size(180, 22);
+            modifierToolStripMenuItem.Text = "Modifier";
+            modifierToolStripMenuItem.Click += modifierToolStripMenuItem_Click;
+            // 
+            // suprimerToolStripMenuItem
+            // 
+            suprimerToolStripMenuItem.Name = "suprimerToolStripMenuItem";
+            suprimerToolStripMenuItem.Size = new Size(180, 22);
+            suprimerToolStripMenuItem.Text = "Suprimer";
+            suprimerToolStripMenuItem.Click += suprimerToolStripMenuItem_Click;
+            // 
             // FormVelo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -110,6 +144,7 @@
             Text = "FormVelo";
             Load += FormVelo_Load;
             ((System.ComponentModel.ISupportInitialize)dgvVelo).EndInit();
+            cmsEdition.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,5 +156,9 @@
         private Button btFermer;
         private ComboBox cbBorne;
         private Button btReset;
+        private ContextMenuStrip cmsEdition;
+        private ToolStripMenuItem ajouterToolStripMenuItem;
+        private ToolStripMenuItem modifierToolStripMenuItem;
+        private ToolStripMenuItem suprimerToolStripMenuItem;
     }
 }
