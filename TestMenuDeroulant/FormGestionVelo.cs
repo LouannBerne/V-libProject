@@ -52,6 +52,11 @@ namespace TestMenuDeroulant
                 {
                     cbBorne.SelectedValue = Convert.ToInt32(dt.Rows[0]["numB"]);
                     cbEtat.SelectedIndex = Convert.ToInt32(dt.Rows[0]["etatV"]);
+                    if (etatGestion == EtatGestion.Delete)
+                    {
+                        cbBorne.Enabled = false;
+                        cbEtat.Enabled = false;
+                    }
                 }
             }
 

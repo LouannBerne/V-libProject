@@ -11,6 +11,8 @@ namespace TestMenuDeroulant {
         Delete
     }
 
+
+
     public partial class Form1 : Form
     {
         private bool _menuExpanded = true;
@@ -148,8 +150,8 @@ namespace TestMenuDeroulant {
         private void btnItem4_Click(object sender, EventArgs e)
         {
             ShowContent("Déconnexion");
-            Controleur.MaConnexion.sedeconnecter();
-            Application.Exit(); // Ferme l'application
+            enablebtn(false);
+            openChildForm(new FormConnexion());
         }
 
         private void ShowContent(string name)
@@ -179,6 +181,23 @@ namespace TestMenuDeroulant {
                 MessageBox.Show("Erreur à la connexion de la base de données !", "ERREUR",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            // Affiche l'écran de connexion au chargement
+            openChildForm(new FormConnexion());
+            btnItem1.Enabled = false;
+            btnItem2.Enabled = false;
+            btnItem3.Enabled = false;
+            btnItem4.Enabled = false;
+        }
+
+        public void enablebtn(bool faire)
+        {
+
+            btnItem1.Enabled = faire;
+            btnItem2.Enabled = faire;
+            btnItem3.Enabled = faire;
+            btnItem4.Enabled = faire;
+
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
