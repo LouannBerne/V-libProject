@@ -17,6 +17,7 @@ namespace TestMenuDeroulant.Modele
 
         public void seconnecter()
         {
+            // liens vers la bdd
             string myConnectionString = "Database = lberne_TP3_BDVELIB; Data Source = 192.168.10.16; User Id = lberne; Password = Lilietlouann49!";
             myConnection = new MySqlConnection(myConnectionString);
             try // tentative
